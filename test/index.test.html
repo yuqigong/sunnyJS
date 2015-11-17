@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../sunny.min.css">
+	<style type="text/css">
+	/* reset */
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	</style>
+</head>
+<body>
+	<p>Hello, world!</p>
+	<span> <input type="text"> </span>
+	<!-- 引入 Sunny.js -->
+	<script type="text/javascript" src="../build/script/sunny.min.js"></script>
+    <script type="text/template" id="tpl_item">
+        <li class="qt-item" data-city="bj-1">
+            <div class="qt-con">
+                <ul class="qt-loc-det">
+                    <li class="qt-loc-dep">{departure}</li>
+                    <li class="qt-loc-btn"></li>
+                    <li class="qt-loc-des">{arrive}</li>
+                </ul>
+                <div class="qt-pri">￥<span style="font-size: 18px;">{price}</span>起</div>
+                <a href="javascript:;" class="qt-btn js-btn">预订</a>
+            </div>
+            <p>旅行适用日期：{date}</p>
+        </li>
+    </script>
+	<script>
+	// test
+	var str = 'test';
+	console.log(str);
+	</script>
+</body>
+</html>
