@@ -1,7 +1,19 @@
 (function() {
     var FunctionUtil = {
         /**
-         * 判断是否为数组
+         * [getFunctionName 获取函数名称，兼容 IE]
+         * @param  {Function} fn [接受一个函数]
+         * @return {[String]}      [函数名]
+         */
+        getFunctionName: function(fn) {
+            if (fn.name !== undefined) return fn.name;
+            var s = fn.toString();
+            s = s.substr('function '.length);
+            s = s.substr(0, s.indexOf('('));
+            return s;
+        },
+        /**
+         * [isArray 判断是否为数组]
          * @param  {[type]}  obj [description]
          * @return {Boolean}     [description]
          */
@@ -9,7 +21,7 @@
             return Object.prototype.toString.call(obj) === '[object Array]';
         },
         /**
-         * HTML转义函数
+         * [unescape HTML转义函数]
          * @param  {[type]} html [description]
          * @return {[type]}      [description]
          */
@@ -27,7 +39,7 @@
             });
         },
         /**
-         * 数组中取一个随机值
+         * [randomByArrayRange 数组中取一个随机值]
          * @param  {[type]} obj [description]
          * @return {[type]}     [description]
          */
@@ -37,7 +49,7 @@
             return obj[Math.floor(Math.random() * obj.length)];
         },
         /**
-         * 随机取一个值
+         * [randomByMaxRange 随机取一个值]
          * @param  {[type]} min [description]
          * @param  {[type]} max [description]
          * @return {[type]}     [description]
